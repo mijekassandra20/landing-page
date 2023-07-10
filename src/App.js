@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, createContext } from "react";
+
+import LandingPage from './components/Special-Pages/LandingPage';
+
+export const AppContext = createContext();
 
 function App() {
+  const [toggleBurger, setToggleBurger] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" >
+      <AppContext.Provider
+        value={{ toggleBurger, setToggleBurger }} >
+
+        <LandingPage />
+
+      </AppContext.Provider>
+
     </div>
   );
 }
 
 export default App;
+
