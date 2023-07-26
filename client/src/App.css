@@ -1,0 +1,216 @@
+
+:root {
+  --purple-violet-tone: linear-gradient(90deg, #4776E6 0%, #8E54E9 100%);
+  --purple: #4776E6;
+
+  --dark-green: #115b43;
+  --medium-dark-green: #1B6E53;
+  --normal-green: #009262;
+  --medium-light-green: #32C997;
+  --light-green: #84DFC1;
+  --lightest-green: #F1FBF8;
+
+  --dark-orange: #E48900;
+  --medium-dark-orange: #FFA826;
+  --normal-orange: #FFB240;
+  --medium-light-orange: #FFC670;
+  --light-orange: #FFD596;
+  --lightest-orange: #FFF8EC;
+
+  --dark-red: #C43025;
+  --medium-dark-red: #E01507;
+  --normal-red: #E02B1D;
+  --medium-light-red: #FF5A4F;
+  --light-red: #F0857D;
+  --lightest-red: #FFF1F0;
+
+  --dark-blue: #0053AD;
+  --medium-dark-blue: #0663C7;
+  --normal-blue: #0671E0;
+  --medium-light-blue: #4196F0;
+  --light-blue: #DBEDFF;
+  --lightest-blue: #EEF5FC;
+
+  --black: #151515;
+  --darkgrey: #4D4D4D;
+  --grey: #747474;
+  --lightgrey: #B1B1B1;
+  --white: #F4F4F4;
+
+}
+
+html {
+  height: 100%;
+}
+
+body, #root, .App {
+  height: inherit;
+}
+
+input:focus,
+input:active,
+input:hover{
+  outline: none;
+}
+
+.icon-default {
+  color: var(--darkgrey);
+}
+
+.mainlanding-wrapper,
+.body-wrapper {
+  background: var(--grey300);
+  height: inherit;
+  padding-inline: 5rem;
+  padding-block: 3rem;
+}
+
+.body-container,
+.mainlanding-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+/* ----------------------------------------------------------------- */
+
+.field1 {
+  background-image: linear-gradient(white, white), 
+                    var(--purple-violet-tone);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* Default label font-color for field1 design */
+.field1-label {
+  background-image: var(--purple-violet-tone);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.input-group {
+  position: relative;
+}
+
+
+.input-icon-left {
+  position: absolute;
+  left: 1rem;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.input-icon-right {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: 1rem;
+}
+
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.input-group input {
+  padding: 0.7rem 1rem;
+  width: 10rem;
+  border: double 2px transparent;
+  border-radius: 8px;
+  opacity: 0.75;
+}
+
+.field1.left-position {
+  padding-left: 2.2rem;
+  padding-right:0;
+}
+
+.field1-label.icon {
+  left: 2.2rem;
+}
+
+.icon-field1 {
+  color: var(--purple);
+}
+
+/* Sets the opacity of input to 1 if hovered, focus, active or filled */
+.input-group input:hover,
+.input-group input:focus,
+.input-group input:active,
+.input-group input:not(:placeholder-shown){
+  opacity: 1;
+}
+
+/* Positions the label on the top if hovered, focus, active or filled */
+.input-group input:hover + label,
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label
+{
+  top: 0;
+  left: 1rem;
+  background: white;
+  padding-inline: 0.5rem;
+  color: var(--purple);
+  font-size: 0.8rem;
+}
+
+/* ----------------------------------------------------------------- */
+
+.input-group2 {
+  position: relative;
+  display: grid;
+  gap: 5px;
+}
+
+.input-group2 textarea,
+.input-group2 input {
+  padding: 0.7rem 1rem;
+  width: 10rem;
+  border: solid 0.1rem var(--darkgrey);
+  border-radius: 8px;
+  opacity: 0.75;
+  background: var(--white);
+}
+
+.input-group2 label {
+  font-size: 0.9rem;
+}
+
+.input-group2 input:hover {
+  background-image: 
+              linear-gradient(var(--white), var(--white)), 
+              var(--purple-violet-tone);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.input-group2 input:focus,
+.input-group2 input:active {
+  background-image: 
+              linear-gradient(white, white), 
+              var(--purple-violet-tone);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.input-group2 input:hover {
+  border: solid 0.1rem transparent;
+}
+
+.input-group2 .input-icon-right {
+  position: absolute;
+  top: 70%;
+}
+
+.text-area-st {
+  max-width: 10rem;
+}
+
+
+
